@@ -11,7 +11,7 @@ public class HelloWorld {
     int sum = add(28, 32);
     System.out.println("Ex1)  This is a method deomonstration: " + sum);
 
-    // this uses our ranSum method to demonstrate how we can use
+    // this uses our ranSum method to demonstrate how we can use a method to add two random ints.
     int randSum = ranSum();
     System.out.println(
         "Ex2)  This is a method deomonstration of adding two randomly generated numbers between 1-50: "

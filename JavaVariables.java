@@ -11,7 +11,8 @@ public class HelloWorld {
     int sum = add(28, 32);
     System.out.println("Ex1)  This is a method deomonstration: " + sum);
 
-    // this uses our ranSum method to demonstrate how we can use a method to add two random ints.
+    // this uses our ranSum method to demonstrate how we can use a method to add two random
+    // integers.
     int randSum = ranSum();
     System.out.println(
         "Ex2)  This is a method deomonstration of adding two randomly generated numbers between 1-50: "
@@ -27,10 +28,10 @@ public class HelloWorld {
     } else {
       System.out.println("Example one as a larger sum then example 2");
     }
-    
+
     // this is an example of using a ternary construct
     int max = randSum >= rootSum ? randSum : rootSum;
-      System.out.println("Java Ternary example: "+max);
+    System.out.println("Java Ternary example: " + max);
 
   }
 
@@ -59,4 +60,3 @@ public class HelloWorld {
     return (int) (Math.sqrt(num1) + Math.sqrt(num2));
   }
 }
-

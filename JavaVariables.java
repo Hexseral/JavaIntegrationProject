@@ -1,6 +1,6 @@
 // Jordan Tatum
 
-// This imports our math & random packages
+// This imports our packages
 import java.lang.Math;
 import java.util.Random;
 import java.util.Scanner;

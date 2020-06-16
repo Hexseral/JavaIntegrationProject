@@ -250,7 +250,16 @@ public class Integration {
 
         case 17:
           // This is an example of searching an array and identifying the index where a value was
-          // found.
+          System.out
+              .println("This is an example of finding the index of the element 1 in an array:\n ");
+          int[] values = {45, 123, 34, 1, 234};
+          int index = 0;
+          for (int iteration = 0; iteration < values.length; iteration++) {
+            if (values[iteration] == 1) {
+              index = iteration;
+            }
+          }
+          System.out.println("index: " + index);
 
           break;
 

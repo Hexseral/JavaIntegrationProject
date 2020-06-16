@@ -193,7 +193,8 @@ public class Integration {
 
         case 12:
           // example of an overloaded method
-          System.out.println("Below is an example of using an overloaded method to add two ints:\n");
+          System.out
+              .println("Below is an example of using an overloaded method to add two ints:\n");
           System.out.println(overload(12, 12));
           // even though we are using a double with the same method since we have an overloaded
           // method it accepts the input
@@ -250,7 +251,7 @@ public class Integration {
         case 17:
           // This is an example of searching an array and identifying the index where a value was
           // found.
-          
+
           break;
 
         case 18:
@@ -258,6 +259,15 @@ public class Integration {
            * This is an example of a two dimensional array, and how to Search the array to identify
            * the coordinates where a value was found
            */
+          System.out.println("Below is an example of a 2D array: \n");
+          int[][] twoDimensionArray = {{1, 2, 3}, {4, 5, 6, 7}, {8, 9},};
+          // This line will print out the number 2 because it is in row 0 column 1
+          System.out.print("In our 2D array the first row second column number is: ");
+          /*
+           * The line in our print statement calls our array and locates the element in row 1 column
+           * 2, it is important to note that when we index an array it always starts with 0.
+           */
+          System.out.println(twoDimensionArray[0][1]);
 
           break;
 

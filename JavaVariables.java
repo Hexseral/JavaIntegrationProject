@@ -42,7 +42,7 @@
     // changed.
     private final int CONSTANT = 1;
       
-    public void VariablesPrint() {
+    public void variablesPrint() {
       System.out.println("An example of a byte Stored Within This Program: " + bus);
       System.out.println("An example of a short Stored Within This Program: " + snails);
       System.out.println("An example of a int Stored Within This Program: " + insects);

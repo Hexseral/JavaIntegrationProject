@@ -27,19 +27,21 @@ public class Main {
     Scanner scan = new Scanner(System.in);
 
     System.out.println(
-        "Welcome to my Integration Project. Below is a demonstration of what I have learned\rso far in this course.  ");
+        "Welcome to my Integration Project. Below is a demonstration of what I"
+        + " have learned\rso far in this course.  ");
     boolean loopControl = true;
     do {
       System.out.println("\n Type a number 1-19 to see examples, or any other number to exit");
       // Exception handling
       int userInput = 0;
+      do {
       try {
         userInput = scan.nextInt();
       } catch (InputMismatchException e) {
         System.out.println("Please enter a number between 1-15.");
         scan.nextLine();
-        continue;
       }
+      while (userInput = 0);
       int rootSum = root();
       int randSum = ranSum();
 
@@ -52,7 +54,8 @@ public class Main {
 
         case 2:
           System.out.println(
-              "2)  This is a method demonstration of adding two randomly generated numbers between 1-50:  "
+              "2)  This is a method demonstration of adding two randomly "
+              + "generated numbers between 1-50:  "
                   + randSum);
           break;
 
@@ -164,7 +167,7 @@ public class Main {
            * the fields are private members.
            */
           JavaVariables variableExample = new JavaVariables();
-          variableExample.VariablesPrint();
+          variableExample.variablesPrint();
 
           break;
 
@@ -178,8 +181,8 @@ public class Main {
           // parameters.
           System.out.println(
               "Below is an example of using an external class to create objects with unique fields:\n ");
-          Cars car1 = new Cars();
-          Cars car2 = new Cars("Toyota", "Tacoma", 90);
+          Car car1 = new Car();
+          Car car2 = new Car("Toyota", "Tacoma", 90);
 
           System.out.println(car1.getCarMake());
           System.out.println(car1.getcarModel());
@@ -221,10 +224,9 @@ public class Main {
           System.out
               .println("This is an example of using an enhanced for loop to print an array:\n ");
           int[] array = {6, 12, 26, 43, 15};
-          for (Integer elements : array) {
-            System.out.println(elements);
+          for (Integer element : array) {
+            System.out.println(element);
           }
-
 
           break;
 
@@ -233,7 +235,7 @@ public class Main {
           System.out.println("This is an example of finding the minimum in an array:\n ");
           int[] array2 = {56, 112, -33, 74, 32, 221};
           System.out.print("Minimum value: ");
-          System.out.print(minValue(array2));
+          System.out.print(getMinValue(array2));
 
           break;
 
@@ -320,8 +322,8 @@ public class Main {
     // note the different signature
   }
 
-  public static int overload(double one, double two) {
-    return (int) (one + two);
+  public static double overload(double one, double two) {
+    return (one + two);
 
   }
 
@@ -344,14 +346,14 @@ public class Main {
     return (int) (Math.sqrt(num1) + Math.sqrt(num2));
   }
 
-  public static int minValue(int[] num) {
-    int temp = num[0];
+  public static int getMinValue(int[] num) {
+    int minValue = num[0];
 
     for (int i = 0; i < num.length; i++) {
-      if (temp > num[i])
-        temp = num[i];
+      if (minValue > num[i])
+        minValue = num[i];
     }
-    return temp;
+    return minValue;
 
   }
 

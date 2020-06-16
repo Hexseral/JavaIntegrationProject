@@ -21,7 +21,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Integration {
+public class JavaVariables {
   public static void main(String[] args) {
 
     Scanner scan = new Scanner(System.in);

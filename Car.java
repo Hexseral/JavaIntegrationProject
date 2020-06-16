@@ -1,18 +1,17 @@
-// Jordan Tatum
 
- class Cars {
+ class Car {
   
   private String carMake;
   private String carModel;
   private int carTopSpeed;
   
-  public Cars() {
-   carMake = "Ford";
-   carModel = "Mustang";
-   carTopSpeed = 125;
+  public Car() {
+   carMake = "Unknown Make";
+   carModel = "Unknown Model";
+   carTopSpeed = 0;
  }
   
-  public Cars(String make, String model, int topSpeed) {
+  public Car(String make, String model, int topSpeed) {
     
     carMake = make;
     carModel = model;

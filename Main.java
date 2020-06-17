@@ -200,9 +200,8 @@ public class Main {
 
         case 12:
           // example of an overloaded method
-          System.out
-              .println("12) Below is an example of using an overloaded method to "
-                  + "add two ints:\n");
+          System.out.println(
+              "12) Below is an example of using an overloaded method to " + "add two ints:\n");
           System.out.println(overload(12, 12));
           // even though we are using a double with the same method since we have an overloaded
           // method it accepts the input
@@ -211,9 +210,8 @@ public class Main {
 
         case 13:
           // example of a one dimensional array that is declared, instantiated, initialized.
-          System.out
-              .println("13) Below is an array containing 5 integers printed using"
-                  + " a for loop:\n ");
+          System.out.println(
+              "13) Below is an array containing 5 integers printed using" + " a for loop:\n ");
           // Declaration
           int[] arr;
           // Initialization
@@ -228,8 +226,7 @@ public class Main {
         case 14:
           // example of an enhanced for loop
           System.out.println(
-              "14) This is an example of using an enhanced for loop to print" 
-                  + " an array:\n ");
+              "14) This is an example of using an enhanced for loop to print" + " an array:\n ");
           int[] array = {6, 12, 26, 43, 15};
           for (Integer elements : array) {
             System.out.println(elements);
@@ -239,8 +236,7 @@ public class Main {
 
         case 15:
           // This is an example of how to find the minimum value in an array using a method
-          System.out.println("15) This is an example of finding the minimum " 
-          + "in an array:\n ");
+          System.out.println("15) This is an example of finding the minimum " + "in an array:\n ");
           int[] array2 = {56, 112, -33, 74, 32, 221};
           System.out.print("Minimum value: ");
           System.out.print(getMinValue(array2));
@@ -250,8 +246,7 @@ public class Main {
         case 16:
           // This is an example of getting a sum of the values in an array using an accumulator.
           System.out.println(
-              "16) This is an example of getting the sum of all the elements " 
-                  + "in an array: \n");
+              "16) This is an example of getting the sum of all the elements " + "in an array: \n");
           System.out.println("The array: {1,2,3,4,5}\n");
           int[] a = {1, 2, 3, 4, 5};
           System.out.print("Total: ");
@@ -262,8 +257,7 @@ public class Main {
         case 17:
           // This is an example of searching an array and identifying the index where a value was
           System.out.println(
-              "17) This is an example of finding the index of the element 1 "
-                  + "in an array:\n ");
+              "17) This is an example of finding the index of the element 1 " + "in an array:\n ");
           int[] values = {45, 123, 34, 1, 234};
           int index = 0;
           for (int iteration = 0; iteration < values.length; iteration++) {
@@ -297,44 +291,40 @@ public class Main {
 
           break;
 
-
         case 19:
-              // This is an example of an ArrayList
-              System.out.println("19) Below is an example of creating and adding objects"
-                  + " from our car class to an ArrayList: \n");
-              // This creates an ArrayList of type object
-              ArrayList<Car> Cars = new ArrayList<Car>();
-              // builds car objects for ArrayList
-              Car car3 = new Car("Ford", "Mustang", 123);
-              Car car4 = new Car("Ford", "Mustang", 123);
-              Car car5 = new Car("Ford", "Mustang", 123);
-              // appends to car list
-              Cars.add(car3);
-              Cars.add(car4);
-              Cars.add(car5);
-              
-              //prints the object list
-              for (Car c : Cars) {
-                System.out.println(c);
-              }
+          // This is an example of an ArrayList
+          System.out.println("19) Below is an example of creating and adding objects"
+              + " from our car class to an ArrayList: \n");
+          // This creates an ArrayList of type object
+          ArrayList<Car> Cars = new ArrayList<Car>();
+          // builds car objects for ArrayList
+          Car car3 = new Car("Ford", "Mustang", 123);
+          Car car4 = new Car("Ford", "Mustang", 123);
+          Car car5 = new Car("Ford", "Mustang", 123);
+          // appends to car list
+          Cars.add(car3);
+          Cars.add(car4);
+          Cars.add(car5);
+
+          // prints the object list
+          for (Car c : Cars) {
+            System.out.println(c);
+          }
           break;
 
         default:
           loopControl = false;
           break;
       }
-
     } while (loopControl);
-
   }
 
   // This is a method header with a parameter list within the parenthesis
   public static int add(int i, int j) {
     // This is our return value
     return i + j;
-
   }
-  
+
   // Example of an overloaded method (Same name different signature)
   public static int overload(int one, int two) {
     return one + two;
@@ -343,7 +333,6 @@ public class Main {
 
   public static int overload(double one, double two) {
     return (int) (one + two);
-
   }
 
   public static int ranSum() {
@@ -373,7 +362,6 @@ public class Main {
         minValue = num[i];
     }
     return minValue;
-
   }
 
   public static int sumOfElements(int[] array) {

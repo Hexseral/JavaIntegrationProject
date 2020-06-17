@@ -298,9 +298,9 @@ public class Main {
           // This creates an ArrayList of type object
           ArrayList<Car> Cars = new ArrayList<Car>();
           // builds car objects for ArrayList
-          Car car3 = new Car("Ford", "Mustang", 123);
-          Car car4 = new Car("Ford", "Mustang", 123);
-          Car car5 = new Car("Ford", "Mustang", 123);
+          Car car3 = new Car("Bugatti", "Veyron", 253);
+          Car car4 = new Car("Koenigsegg", "Agera", 277);
+          Car car5 = new Car("Bugatti", "Chiron", 304);
           // appends to car list
           Cars.add(car3);
           Cars.add(car4);

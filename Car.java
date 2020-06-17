@@ -6,8 +6,8 @@
   private int carTopSpeed;
   
   public Car() {
-   carMake = "Unknown Make";
-   carModel = "Unknown Model";
+   carMake = "Unkown Make";
+   carModel = "Unkown Model";
    carTopSpeed = 0;
  }
   
@@ -34,5 +34,8 @@
   public void setcarTopSpeed(int carTopSpeed) {
     this.carTopSpeed = carTopSpeed;
   }
-  
+  //Formats our output for our ArrayList
+  public  String toString(){
+    return  carMake + ", " + carModel + ", " + carTopSpeed + " Mph";
+  }
 }

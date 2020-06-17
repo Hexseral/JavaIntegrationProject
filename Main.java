@@ -27,21 +27,30 @@ public class Main {
     Scanner scan = new Scanner(System.in);
 
     System.out.println(
-        "Welcome to my Integration Project. Below is a demonstration of what I"
-        + " have learned\rso far in this course.  ");
+        "Welcome to my Integration Project. Below is a demonstration of what "
+        + "I have learned\rso far in this course.  ");
     boolean loopControl = true;
     do {
-      System.out.println("\n Type a number 1-19 to see examples, or any other number to exit");
+      System.out.println("\n Type a number 1-19 to see examples, or any other "
+          + "number to exit");
       // Exception handling
       int userInput = 0;
-      do {
+      boolean exceptionControl = false;
+    do {  
       try {
         userInput = scan.nextInt();
+        exceptionControl = false;
       } catch (InputMismatchException e) {
-        System.out.println("Please enter a number between 1-15.");
+        System.out.println("Please enter a number between 1-19.");
         scan.nextLine();
+        exceptionControl = true;
       }
-      while (userInput = 0);
+        catch (Exception e) {
+          e.printStackTrace();
+        }
+    }
+      while (exceptionControl);
+    
       int rootSum = root();
       int randSum = ranSum();
 
@@ -61,11 +70,12 @@ public class Main {
 
         case 3:
           System.out.println(
-              "3)  This is a method demonstration of adding two square rooted numbers: " + rootSum);
+              "3)  This is a method demonstration of adding two "
+              + "square rooted numbers: " + rootSum);
           break;
 
         case 4:
-          // This if else statement evaluates the randSum & rootSum and prints out the greater value
+          // This if else statement evaluates the randSum & rootSum and prints out higher values
           if (rootSum > randSum) {
             System.out.println("4) Example two has a larger sum then example 1");
           } else {
@@ -81,7 +91,8 @@ public class Main {
 
         case 6:
           System.out.println(
-              "6) This is an example of printing numbers using a while loop with a break statment at 4:\n ");
+              "6) This is an example of printing numbers using a while loop "
+              + "with a break statment at 4:\n ");
           int i = 1;
           while (i < 6) {
             System.out.println(i);
@@ -100,12 +111,14 @@ public class Main {
 
         case 7:
           System.out.println(
-              "7) This is an example of printing 5 numbers using a for loop with a continue statment at 4:\n ");
+              "7) This is an example of printing 5 numbers using a for loop "
+              + "with a continue"
+              + " statment at 4:\n ");
           for (int f = 1; f < 6; f++) {
             /*
-             * This is an example of a continue within a loop using the condition if f = 4. it will
-             * then exclude that from the loop output (note that we cannot use =, so we use == which
-             * is a relational operator)
+             * This is an example of a continue within a loop using the condition
+             *  if f = 4. it will then exclude that from the loop output 
+             *  (note that we cannot use =, so we use == which is a relational operator)
              */
             if (f == 4) {
               continue;
@@ -121,7 +134,8 @@ public class Main {
            * without running into a syntax error
            */
           System.out.println(
-              "8) This is an example of comparing the two string objects \"pizza\", \"mouse\" and \"keyboard\": \n");
+              "8) This is an example of comparing the two string objects \"pizza\", "
+              + "\"mouse\" and \"keyboard\": \n");
           String pizza = "pizza";
           String keyboard = "keyboard";
           String mouse = "mouse";
@@ -144,7 +158,8 @@ public class Main {
 
         case 9:
           System.out.println(
-              "9) This is an example of using Java's Arithmatic Operators using two variables x & y that both equal 2: \n");
+              "9) This is an example of using Java's Arithmatic Operators using two variables "
+              + "x & y that both equal 2: \n");
           int x = 2;
           int y = 2;
           System.out.print(" x + y = ");
@@ -163,9 +178,11 @@ public class Main {
 
         case 10:
           /*
-           * This pulls from my milestone 1 Class and displays the variables I created, notice that
-           * the fields are private members.
+           * This pulls from my milestone 1 Class and displays the variables I created, 
+           * notice that the fields are private members.
            */
+          System.out.println("10) This is an example of all the data types in Java"
+              + " using an external class: ");
           JavaVariables variableExample = new JavaVariables();
           variableExample.variablesPrint();
 
@@ -173,14 +190,14 @@ public class Main {
 
         case 11:
           /*
-           * This is an example of creating an external class that contains getters, setters, and a
-           * constructor with & without parameters. I will be using a simple Car example with the
-           * fields make model and top speed. See the Cars.java file for the external class.
+           * This is an example of creating an external class that contains getters, setters,
+           *  and a constructor with & without parameters. I will be using a simple Car example 
+           *  with the fields make model and top speed. See the Cars.java file for the external 
+           *  class.
            */
-          // The object car1 is using a constructor without parameters, while car2 is with 3
-          // parameters.
           System.out.println(
-              "Below is an example of using an external class to create objects with unique fields:\n ");
+              "11) Below is an example of using an external class to create objects "
+              + "with unique fields:\n ");
           Car car1 = new Car();
           Car car2 = new Car("Toyota", "Tacoma", 90);
 
@@ -222,17 +239,20 @@ public class Main {
         case 14:
           // example of an enhanced for loop
           System.out
-              .println("This is an example of using an enhanced for loop to print an array:\n ");
+              .println("This is an example of using an enhanced for loop to print"
+                  + " an array:\n ");
           int[] array = {6, 12, 26, 43, 15};
-          for (Integer element : array) {
-            System.out.println(element);
+          for (Integer elements : array) {
+            System.out.println(elements);
           }
+
 
           break;
 
         case 15:
           // This is an example of how to find the minimum value in an array using a method
-          System.out.println("This is an example of finding the minimum in an array:\n ");
+          System.out.println("This is an example of finding the minimum "
+              + "in an array:\n ");
           int[] array2 = {56, 112, -33, 74, 32, 221};
           System.out.print("Minimum value: ");
           System.out.print(getMinValue(array2));
@@ -242,7 +262,8 @@ public class Main {
         case 16:
           // This is an example of getting a sum of the values in an array using an accumulator.
           System.out
-              .println("This is an example of getting the sum of all the elements in an array: \n");
+              .println("This is an example of getting the sum of all the elements "
+                  + "in an array: \n");
           System.out.println("The array: {1,2,3,4,5}\n");
           int[] a = {1, 2, 3, 4, 5};
           System.out.print("Total: ");
@@ -253,7 +274,8 @@ public class Main {
         case 17:
           // This is an example of searching an array and identifying the index where a value was
           System.out
-              .println("This is an example of finding the index of the element 1 in an array:\n ");
+              .println("This is an example of finding the index of the element 1 "
+                  + "in an array:\n ");
           int[] values = {45, 123, 34, 1, 234};
           int index = 0;
           for (int iteration = 0; iteration < values.length; iteration++) {
@@ -267,18 +289,24 @@ public class Main {
 
         case 18:
           /*
-           * This is an example of a two dimensional array, and how to Search the array to identify
-           * the coordinates where a value was found
+           * This is an example of a two dimensional array, and how to Search the array
+           * to identify the coordinates where a value was found
            */
-          System.out.println("Below is an example of a 2D array: \n");
+          System.out.println("Below is an example of finding a value in a 2D array: \n");
           int[][] twoDimensionArray = {{1, 2, 3}, {4, 5, 6, 7}, {8, 9},};
-          // This line will print out the number 2 because it is in row 0 column 1
-          System.out.print("In our 2D array the first row second column number is: ");
           /*
-           * The line in our print statement calls our array and locates the element in row 1 column
-           * 2, it is important to note that when we index an array it always starts with 0.
+           * The line in our print statement calls our array and locates the element
+           * in row 1 column2, it is important to note that when we index an array 
+           * it always starts with 0.
            */
-          System.out.println(twoDimensionArray[0][1]);
+          
+          for (int row = 0; row < twoDimensionArray.length; row++ ) {
+              for (int column = 0; column < twoDimensionArray[row].length; column++) {
+                   if (twoDimensionArray[row][column] == 9 ) {
+                     System.out.print("Row: " + row + " Column: " + column);
+                   }
+              }
+          }
 
           break;
 
@@ -286,17 +314,18 @@ public class Main {
         case 19:
           // This is an example of an ArrayList
           System.out
-              .println("Below is an example of creating and adding Strings to an ArrayList: \n");
+              .println("Below is an example of creating and adding Strings to an "
+                  + "ArrayList: \n");
           // This creates an ArrayList of type String
-          ArrayList<String> cars = new ArrayList<String>();
+          ArrayList<String> car = new ArrayList<String>();
           // This will add each String to the list cars
-          cars.add("Toyota");
-          cars.add("Ford");
-          cars.add("Subaru");
-          cars.add("Honda");
-          cars.add("Mazda");
+          car.add("Toyota");
+          car.add("Ford");
+          car.add("Subaru");
+          car.add("Honda");
+          car.add("Mazda");
 
-          System.out.println(cars);
+          System.out.println(car);
 
           break;
 
@@ -322,8 +351,8 @@ public class Main {
     // note the different signature
   }
 
-  public static double overload(double one, double two) {
-    return (one + two);
+  public static int overload(double one, double two) {
+    return (int) (one + two);
 
   }
 
@@ -340,8 +369,8 @@ public class Main {
     double num1 = 24;
     double num2 = 64;
     /*
-     * This is an example of using the Math class to return the sum of two square roots while also
-     * casting the sum from a double to an integer.
+     * This is an example of using the Math class to return the sum of two square
+     *  roots while also casting the sum from a double to an integer.
      */
     return (int) (Math.sqrt(num1) + Math.sqrt(num2));
   }
